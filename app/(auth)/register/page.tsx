@@ -48,7 +48,7 @@ export default function Register() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black">
+    <div className="flex min-h-screen items-center justify-center bg-zinc-50 ">
       <main className="w-full max-w-md rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
         <h1 className="mb-6 text-center text-2xl font-semibold">Daftar Akun</h1>
 
@@ -104,7 +104,7 @@ export default function Register() {
 
         <p className="mt-6 text-center text-sm text-zinc-600">
           Sudah punya akun?{" "}
-          <Link href="/login" className="font-semibold text-black hover:underline">
+          <Link href="/sign-in" className="font-semibold text-white hover:underline">
             Login di sini
           </Link>
         </p>

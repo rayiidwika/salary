@@ -45,7 +45,7 @@ export default function SignIn() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-black">
+    <div className="flex min-h-screen items-center justify-center bg-zinc-50">
       <main className="w-full max-w-md rounded-2xl bg-white p-8 shadow dark:bg-zinc-900">
         <h1 className="mb-6 text-center text-2xl font-semibold">Sign In</h1>
 
@@ -72,7 +72,7 @@ export default function SignIn() {
 
           <button
             disabled={loading}
-            className="w-full rounded-lg bg-black py-2 text-white disabled:opacity-50"
+            className="w-full rounded-lg bg-black py-2 hover:bg-zinc-800 text-white disabled:opacity-50"
           >
             {loading ? "Logging in..." : "Login"}
           </button>
