@@ -1,0 +1,24 @@
+meta {
+  name: payroll
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://payroll.politekniklp3i-tasikmalaya.ac.id/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+  "email" : "rayi@mail.com",
+  "password" : "password"}
+  
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
