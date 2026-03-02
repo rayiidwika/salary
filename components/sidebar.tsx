@@ -21,7 +21,7 @@ export default function Sidebar() {
   const [isMasterOpen, setIsMasterOpen] = useState(true);
 
   return (
-    <div className="flex h-screen w-64 flex-col bg-[#004d73] text-white">
+    <div className="flex h-screen w-64 flex-col bg-[#004d73] text-white fixed">
       {/* Logo Section */}
       <div className="flex items-center gap-3 p-6">
         <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#00acc1] font-bold text-white shadow-lg">
@@ -59,11 +59,11 @@ export default function Sidebar() {
           {/* Submenu Items */}
           {isMasterOpen && (
             <div className="mt-2 ml-4 border-l border-white/20 pl-4 space-y-1">
-              <SubMenuItem icon={<Building2 size={18} />} label="Divisi" />
-              <SubMenuItem icon={<Briefcase size={18} />} label="Jabatan" />
-              <SubMenuItem icon={<Users size={18} />} label="Karyawan" />
-              <SubMenuItem icon={<UserSquare2 size={18} />} label="User" />
-              <SubMenuItem icon={<Settings2 size={18} />} label="Konfigurasi" />
+              <SubMenuItem href="/divisi" icon={<Building2 size={18} />} label="Divisi"  />
+              <SubMenuItem href="/jabatan" icon={<Briefcase size={18} />} label="Jabatan" />
+              <SubMenuItem href="/karyawan" icon={<Users size={18} />} label="Karyawan" />
+              <SubMenuItem href="/user" icon={<UserSquare2 size={18} />} label="User" />
+              <SubMenuItem href="/konfigurasi" icon={<Settings2 size={18} />} label="Konfigurasi" />
             </div>
           )}
         </div>
@@ -91,9 +91,9 @@ function NavItem({ icon, label }: { icon: React.ReactNode; label: string }) {
 }
 
 // Komponen Pembantu untuk Sub-Menu
-function SubMenuItem({ icon, label }: { icon: React.ReactNode; label: string }) {
+function SubMenuItem({ href, icon, label }: { href?: string; icon: React.ReactNode; label: string }) {
   return (
-    <a href="#" className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white">
+    <a href={href ?? "#"} className="flex items-center gap-3 rounded-lg px-3 py-2 text-sm text-white/70 transition-colors hover:bg-white/10 hover:text-white">
       {icon}
       <span>{label}</span>
     </a>
